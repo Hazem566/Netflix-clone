@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100dvh;
+    background-color: #000;
+    position: relative;
+}
+
+.icon__img {
+    filter: invert(100%);
+}
+
+button {
+    cursor: pointer;
+}
+
+/* HERO SECTION */
+#hero {
+    background: linear-gradient(to top right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
+    position: relative;
+    min-height: 660px;
+    display: grid;
+    overflow: hidden;
+}
+
+.background__img {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    position: relative;
+}
+
+.container .slider__icons {
+    position: absolute;
+    width: 95%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .slider__icons button {
+    background-color: #000;
+    border: 0;
+    display: grid;
+    place-items: center;
+    height: 7rem;
+    width: 1.4rem;
+    border-radius: 8px;
+    opacity: .6;
+    transition: opacity 300ms ease;
+}
+
+.container .slider__icons button:hover {
+    opacity: 1;
+}
+
+.container .slider__icons button img {
+    width: .6rem;
+}
+
+.container>.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: .8rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo__img {
+    width: 7.5rem;
+}
+
+nav div {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    padding-right: .4rem;
+}
+
+nav div select {
+    background-color: rgba(0, 0, 0, .5);
+    color: #eee;
+    padding: .3rem .7rem;
+    border: 1px solid rgba(255, 255, 255, .4);
+    border-radius: .2rem;
+    font-size: .85rem;
+}
+
+nav div #sign__out {
+    font-size: .9rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #fff;
+    background: rgb(229, 9, 20);
+    padding: .3rem .7rem;
+    border: 0;
+    border-radius: .25rem;
+}
+
+.slider {
+    height: 100%;
+    position: relative;
+}
+
+.slider .details {
+    color: #eee;
+    position: absolute;
+    bottom: 0;
+    padding-left: .8rem;
+}
+
+.slider .details h1 {
+    font-size: 1.88rem;
+    line-height: 1.4;
+}
+
+.slider .details .dc {
+    width: 20rem;
+}
+
+.slider .details .dc .trend__box {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    width: 8rem;
+    padding: .4rem;
+    border-radius: 1rem;
+}
+
+.slider .details .dc .trend__box p {
+    font-size: .7rem;
+    font-weight: 700;
+}
+
+.slider .details .dc .trend__box img {
+    height: .9rem;
+}
+
+.slider .details .details__content2>img {
+    width: 90%;
+    aspect-ratio: 16 / 4;
+    margin-top: 1rem;
+}
+
+.slider .details .details__content3>img {
+    width: 90%;
+    margin-top: 1rem;
+}
+
+.slider .details .dc .catigory__box {
+    display: flex;
+    gap: .6rem;
+    margin: .7rem 0 .35rem 0;
+}
+
+.slider .details .dc .catigory__box button {
+    background-color: rgb(70, 70, 70);
+    border: 0;
+    padding: .15rem .4rem;
+    border-radius: .2rem;
+    color: #bebebe;
+    font-size: .6rem;
+    font-weight: 700;
+}
+
+.slider .details .details__content2>p {
+    display: none;
+    width: 33rem;
+    line-height: 1.5;
+    font-size: .9rem;
+    margin-bottom: 1rem;
+}
+
+.slider .details .details__content3>p {
+    display: none;
+    width: 36rem;
+}
+
+.sign__up {
+    padding: .8rem;
+}
+
+.sign__up button {
+    padding: .7rem;
+    background-color: rgb(229, 9, 20);
+    color: #fff;
+    padding: .75rem 1.2rem;
+    font-size: 1.5rem;
+    border: 0;
+    border-radius: .3rem;
+    font-weight: 600;
+    display: inline-flex;
+    gap: .87rem;
+    justify-content: center;
+}
+
+.sign__up button img {
+    width: 1.6rem;
+}
+
+.navigator {
+    min-height: 105px;
+    background: linear-gradient(to right, rgba(33, 13, 22, 1) 16%, rgba(184, 40, 105, 1), rgba(229, 9, 20, 1), rgba(184, 40, 105, 1), rgba(33, 13, 22, 1) 84%);
+    width: 200%;
+    left: -50%;
+    position: relative;
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.navigator__content {
+    background: radial-gradient(50% 500% at 50% -420%, rgba(64, 97, 231, 0.4) 80%, rgba(0, 0, 0, 0.1) 100%), black;
+    height: 95%;
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.navigator__content .content {
+    width: 50%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.7rem;
+}
+
+.navigator__content .content .controls {
+    display: grid;
+    width: 9.5rem;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto;
+    column-gap: 1.3rem;
+    justify-content: center;
+}
+
+.navigator__content .controls .navigate__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigator__content .controls .navigate__icons span {
+    width: .5rem;
+    height: .5rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.navigator__content .controls .navigate__icons span.active {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.navigator__content .controls .left,
+.navigator__content .controls .right {
+    display: grid;
+    background-color: transparent;
+    border: 0;
+}
+
+.navigator__content .controls .left img,
+.navigator__content .controls .right img {
+    filter: invert(50%);
+    height: 1rem;
+}
+
+.navigator__content .content .play__stop {
+    position: absolute;
+    background-color: transparent;
+    right: 2rem;
+    border: 0;
+    padding: 0;
+    align-self: center;
+    display: grid;
+}
+
+.navigator__content .content .play__stop img {
+    width: 1.3rem;
+}
