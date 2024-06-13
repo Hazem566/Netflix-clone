@@ -23,7 +23,6 @@ button {
 
 /* HERO SECTION */
 #hero {
-    background: linear-gradient(to top right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
     position: relative;
     min-height: 660px;
     display: grid;
@@ -36,6 +35,7 @@ button {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 550ms ease, opacity 550ms ease;
 }
 
 .container {
@@ -50,7 +50,7 @@ button {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    height: 100%;
+    height: 0;
     display: none;
     justify-content: space-between;
     align-items: center;
@@ -120,6 +120,7 @@ nav div #sign__out {
     padding: .3rem .7rem;
     border: 0;
     border-radius: .25rem;
+    cursor: pointer;
 }
 
 .slider {
@@ -205,6 +206,7 @@ nav div #sign__out {
 
 .sign__up {
     padding: .8rem;
+    cursor: pointer;
 }
 
 .sign__up button {

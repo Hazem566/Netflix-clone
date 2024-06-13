@@ -100,10 +100,27 @@
     }
 
     .navigator__content .controls .navigate__icons span {
+        position: relative;
         border-radius: 0;
         width: 6.5rem;
         height: .25rem;
     }
+
+    .navigator__content .controls .navigate__icons span::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        width: 0;
+        height: 100%;
+    }
+
+    .navigator__content .controls .navigate__icons span.run::before {
+        width: 100%;
+        transition: width 3s linear;
+    }
+
 }
 
 @media only screen and (min-width: 1280px) {
@@ -139,5 +156,54 @@
 
     .slider .details .details__content3>p {
         width: 38rem;
+    }
+}
+
+
+@keyframes backgroundSlide1 {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(-4%);
+        opacity: 0;
+    }
+}
+
+@keyframes backgroundSlide2 {
+    from {
+        transform: translateX(4%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDetailsContainer1 {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(-16%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideDetailsContainer2 {
+    from {
+        transform: translateX(20%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
     }
 }
