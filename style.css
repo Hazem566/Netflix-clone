@@ -190,6 +190,7 @@ nav div #sign__out {
     color: #bebebe;
     font-size: .6rem;
     font-weight: 700;
+    pointer-events: none;
 }
 
 .slider .details .details__content2>p {
