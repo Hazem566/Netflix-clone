@@ -35,11 +35,12 @@ const playPuseImg = document.querySelector(".play__stop img");
 let selectedICon = null;
 let currentDisplay = 1;
 let currentIcon = 1;
-let runContent = false;
+let runContent = true;
 
 /************* Event Listeners *************/
 window.addEventListener("DOMContentLoaded", () => {
   homeContent1();
+  running(currentIcon);
 });
 slideRightBtn.addEventListener("click", slideRight);
 slideRightIcon.addEventListener("click", slideRight);
@@ -69,7 +70,7 @@ function homeContent2() {
   backgroundImg.src = heroData[1].image1;
   heroBackgroundElement.style.filter = "blur(.6px)";
   heroSection.style.background =
-    "linear-gradient(to top right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))";
+    "linear-gradient(to top right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))";
   detailsContainer.innerHTML = `
     <div class="dc details__content2">
       <div class="trend__box">
@@ -241,7 +242,7 @@ function switchContentWithIcons(iconId) {
 
 function sleep() {
   return new Promise((resolve) => {
-    setTimeout(resolve, 3000);
+    setTimeout(resolve, 5000);
   });
 }
 function playAndStopRunningContent() {
@@ -274,4 +275,22 @@ function playAndStopRunningContent() {
     playPuseImg.src = "./assets/play.svg";
     icon.classList.remove("run");
   }
+}
+
+async function running(currentIcon) {
+  if (currentIcon === 4) currentIcon = 1;
+  const icon = Array.from(navigatorIcons).filter(
+    (item) => item.dataset.id == currentIcon
+  )[0];
+  icon.classList.add("run");
+  await sleep();
+  icon.classList.remove("run");
+  setTimeout(() => {
+    if (runContent === false) return;
+    if (currentIcon === 1) runContent12();
+    else if (currentIcon === 2) runContent23();
+    else if (currentIcon === 3) runContent31();
+  });
+  if (runContent === false) return;
+  else return running(currentIcon + 1);
 }

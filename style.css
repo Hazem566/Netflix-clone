@@ -11,6 +11,7 @@ body {
     min-height: 100dvh;
     background-color: #000;
     position: relative;
+    color: #fff;
 }
 
 .icon__img {
@@ -313,3 +314,69 @@ nav div #sign__out {
 .navigator__content .content .play__stop img {
     width: 1.3rem;
 }
+
+/* END OF HERO SECTION */
+
+/* TABS SECTION */
+#tabs {
+    padding: 0 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.tabs__container>h1 {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.tabs__details {
+    margin-top: .5rem;
+    display: grid;
+    gap: .5rem
+}
+
+.tab {
+    position: relative;
+    border-radius: 1rem;
+    padding: 1.5rem .5rem .5rem 1.2rem;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: .3rem;
+}
+
+.tab::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(145.34deg, #2c2555 60%, #410218);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.tab .tab__text h1 {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.tab .tab__text p {
+    color: rgba(255, 255, 255, .6);
+    font-weight: 600;
+    font-size: .95rem;
+    line-height: 1.3;
+    margin-top: .4rem;
+}
+
+.tab .tab__img {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.tab .tab__img img {
+    height: 4rem;
+}
+
+/* END OF TABS SECTION */
