@@ -31,11 +31,14 @@ const slideLeftIcon = document.querySelector(".left");
 const slideRightIcon = document.querySelector(".right");
 const playPuseBtn = document.querySelector(".play__stop");
 const playPuseImg = document.querySelector(".play__stop img");
+const questionHead = document.querySelectorAll(".question__head");
+
 // vars
 let selectedICon = null;
 let currentDisplay = 1;
 let currentIcon = 1;
 let runContent = true;
+let questionCount = null;
 
 /************* Event Listeners *************/
 window.addEventListener("DOMContentLoaded", () => {
@@ -54,6 +57,11 @@ navigatorIcons.forEach((icon) => {
   });
 });
 playPuseBtn.addEventListener("click", playAndStopRunningContent);
+questionHead.forEach((head) => {
+  head.addEventListener("click", (e) => {
+    openQuestion(e);
+  });
+});
 /**************** Functions ****************/
 function homeContent1() {
   heroSection.style.background =
@@ -293,4 +301,31 @@ async function running(currentIcon) {
   });
   if (runContent === false) return;
   else return running(currentIcon + 1);
+}
+
+function getHead(ele) {
+  ele = ele.target;
+  return ele.tagName === "DIV" ? ele : ele.parentElement;
+}
+
+function openQuestion(ele) {
+  const head = getHead(ele);
+  const headId = head.parentElement.dataset.id;
+  const headImg = head.querySelector("img");
+  const body = head.nextElementSibling;
+  if (questionCount === null || questionCount != headId) {
+    questionCount = headId;
+    questionHead.forEach((h) => {
+      const b = h.nextElementSibling;
+      const i = h.querySelector("img");
+      b.classList.remove("active");
+      i.classList.remove("active");
+    });
+    body.classList.add("active");
+    headImg.classList.add("active");
+  } else {
+    body.classList.remove("active");
+    headImg.classList.remove("active");
+    questionCount = null;
+  }
 }

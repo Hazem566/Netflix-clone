@@ -381,3 +381,72 @@ nav div #sign__out {
 }
 
 /* END OF TABS SECTION */
+
+/* FAQ SECTION */
+#faq {
+    padding: 1.5rem;
+    padding-top: 0;
+}
+
+.faq__container>h1 {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.faq__details {
+    margin-top: 1rem;
+}
+
+.question:not(:first-child) {
+    margin-top: .45rem;
+}
+
+.question__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: rgb(45, 45, 45);
+    cursor: pointer;
+}
+
+.question__head:hover {
+    background-color: rgb(65, 65, 65);
+}
+
+.question__head h1 {
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.question__head img {
+    filter: invert(100%) brightness(100%);
+    height: 1.6rem;
+    transition: transform 200ms ease;
+}
+
+.question__head img.active {
+    transform: rotate(45deg);
+}
+
+.question__body {
+    border-top: 1px solid #000;
+    height: 0;
+    overflow: hidden;
+    background-color: rgb(45, 45, 45);
+}
+
+.question__body.active {
+    padding: 1.5rem;
+    height: 100%;
+}
+
+#faq .sign__up {
+    padding: 0;
+    margin-top: 4rem;
+}
+
+/* END OF FAQ SECTION */
+
+/* FOOTER SECTION */
+/* END OF FOOTER SECTION */

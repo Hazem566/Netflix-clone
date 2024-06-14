@@ -121,7 +121,8 @@
         transition: width 5s linear;
     }
 
-    #tabs {
+    #tabs,
+    #faq {
         padding: 0 5rem;
     }
 
@@ -137,6 +138,26 @@
 
     .tab .tab__img img {
         height: 4.5rem;
+    }
+
+    .faq__container>h1 {
+        font-size: 1.5rem;
+    }
+
+    .faq__details {
+        padding-right: 10rem;
+    }
+
+    .question__head h1 {
+        font-size: 1.4rem;
+    }
+
+    .question__head img {
+        height: 2.1rem;
+    }
+
+    .question__body p {
+        font-size: 1.4rem;
     }
 }
 
