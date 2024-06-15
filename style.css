@@ -204,6 +204,7 @@ nav div #sign__out {
 .slider .details .details__content3>p {
     display: none;
     width: 36rem;
+    font-size: .95rem;
 }
 
 .sign__up {
@@ -313,14 +314,14 @@ nav div #sign__out {
 }
 
 .navigator__content .content .play__stop img {
-    width: 1.3rem;
+    width: 1.1rem;
 }
 
 /* END OF HERO SECTION */
 
 /* TABS SECTION */
 #tabs {
-    padding: 0 1.5rem;
+    padding: 0 2rem;
     margin-bottom: 3rem;
 }
 
@@ -384,7 +385,7 @@ nav div #sign__out {
 
 /* FAQ SECTION */
 #faq {
-    padding: 1.5rem;
+    padding: 1.5rem 2rem;
     padding-top: 0;
 }
 
@@ -449,4 +450,46 @@ nav div #sign__out {
 /* END OF FAQ SECTION */
 
 /* FOOTER SECTION */
+#footer {
+    padding: .15rem 4rem 6rem;
+}
+
+.footer__container p {
+    font-size: .85rem;
+    color: rgb(173, 173, 173);
+}
+
+.fo__links {
+    margin-top: 2.5rem;
+    display: grid;
+    row-gap: .75rem;
+}
+
+.footer__container .f3 select {
+    font-size: .95rem;
+    background-color: #131313;
+    border: 1px solid #5e5e5e;
+    color: #fff;
+    border-radius: .2rem;
+    padding: .1rem 1rem;
+    align-self: flex-start;
+}
+
+.footer__container .f1 {
+    font-size: .9rem;
+}
+
+.footer__container .f1,
+.footer__container .f2 {
+    text-decoration: underline;
+}
+
+.footer__container .f3 {
+    margin-top: 3.62rem;
+}
+
+.footer__container .f3 p {
+    margin-top: 2.5rem;
+}
+
 /* END OF FOOTER SECTION */
